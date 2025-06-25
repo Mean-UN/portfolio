@@ -1,0 +1,29 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx,vue}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'body-color': 'rgb(250, 250, 250)',
+        'color-white': 'rgb(255, 255, 255)',
+        'text-color-second': 'rgb(68, 68, 68)',
+        'text-color-third': 'rgb(30, 159, 171)',
+        'first-color': 'rgb(110, 87, 224)',
+        'first-color-hover': 'rgb(40, 91, 212)',
+        'second-color': 'rgb(0, 201, 255)',
+        'third-color': 'rgb(192, 166, 49)',
+        'first-shadow-color': 'rgba(0, 0, 0, 0.1)',
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
+      boxShadow: {
+        'header-shadow': '0 1px 6px rgba(0, 0, 0, 0.1)',
+      },
+    },
+  },
+  plugins: [],
+}
