@@ -258,7 +258,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, reactive, computed, nextTick } from 'vue'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
-import cvPdf from '@/assets/pdf/Un Mean Web Developer .pdf'
+const cvPdf = '/Un-Mean-Web-Developer-CV.pdf'
 
 // Router
 const route = useRoute()
