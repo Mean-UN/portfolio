@@ -237,7 +237,7 @@ const activeFilter = ref('All')
 const stats = [
   {
     title: 'Projects',
-    number: '8+',
+    number: '9+',
     label: 'Completed Projects',
     icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>`,
     bgColor: 'bg-gradient-to-r from-blue-500 to-cyan-500',
@@ -253,7 +253,7 @@ const stats = [
   },
   {
     title: 'Team Projects',
-    number: '6+',
+    number: '9+',
     label: 'Collaborative Works',
     icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>`,
     bgColor: 'bg-gradient-to-r from-purple-500 to-pink-500',
@@ -261,7 +261,7 @@ const stats = [
   },
   {
     title: 'Experience',
-    number: '2+',
+    number: '1.5+',
     label: 'Years Learning',
     icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>`,
     bgColor: 'bg-gradient-to-r from-orange-500 to-red-500',
@@ -275,15 +275,35 @@ const categories = ['All', 'Full Stack', 'Frontend', 'Backend', 'Mobile', 'Desig
 // Projects data based on your CV
 const projects = [
   {
+    id: 0,
+    title: 'Booking Travel App',
+    description: 'Seft learning to create a app system for booking room in hotel with adventure place that user want to go and travel with their family or friends.',
+    period: 'June 21 - August 29, 2025',
+    category: 'Mobile',
+    teamSize: 'Team of 5',
+    role: 'Mobile Developer, Backend & Frontend Developer',
+    status: 'Completed',
+    technologies: ['Flutter', 'Dart', 'Laravel', 'MySQL', 'Jira', 'Git'],
+    features: [
+      'Booking room and view Hotel and Adventure Place',
+      'User authentication and authorization system',
+      
+    ],
+    gradientBg: 'from-pink-500 to-rose-500',
+    icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>`,
+    // liveUrl: 'https://your-beauty-store.com',
+    githubUrl: 'https://github.com/kimchhik-chhuong/booking_room_travel',
+  },
+  {
     id: 1,
     title: 'Beauty Store System',
-    description: 'A comprehensive e-commerce platform for a beauty store featuring user authentication, product management, shopping cart functionality, and administrative features. The system includes promotion management via Telegram integration and complete user history tracking.',
+    description: 'A system for a beauty store that allows users to manage their products, send promotions, track orders and user history.',
     period: 'Mar 10 - Apr 2, 2025',
     category: 'Full Stack',
     teamSize: 'Team of 6',
     role: 'DevOps, Backend & Frontend Developer',
     status: 'Completed',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'PHP', 'MySQL', 'AWS EC2'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'PHP', 'MySQL', 'AWS EC2', 'Telegram Bot', 'Git', 'Jira', 'Figma'],
     features: [
       'User authentication and authorization system',
       'Product catalog with search and filtering',
@@ -295,9 +315,8 @@ const projects = [
     ],
     gradientBg: 'from-pink-500 to-rose-500',
     icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>`,
-    liveUrl: 'https://your-beauty-store.com',
-    githubUrl: 'https://github.com/meanun/beauty-store',
-    hasDemo: true
+    // liveUrl: 'https://your-beauty-store.com',
+    githubUrl: 'https://github.com/liikaa7zip/beauty_store_G13',
   },
   {
     id: 2,
@@ -305,10 +324,10 @@ const projects = [
     description: 'A responsive web application designed to help users track and manage their personal expenses. Features include adding, editing, and deleting expense records with categorization and visual reporting through charts and graphs.',
     period: 'Jan 14 - 29, 2025',
     category: 'Frontend',
-    teamSize: 'Individual Project',
+    teamSize: 'Team of 3',
     role: 'Full Stack Developer',
     status: 'Completed',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Chart.js', 'Local Storage'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Chart.js', 'Local Storage', 'Firebase'],
     features: [
       'Add, edit, and delete expense entries',
       'Expense categorization system',
@@ -316,13 +335,14 @@ const projects = [
       'Monthly and yearly expense summaries',
       'Data persistence using local storage',
       'Responsive design for mobile and desktop',
-      'Export data functionality'
+      'Export data functionality',
+      'Authentication and authorization system with friebase',
     ],
     gradientBg: 'from-green-500 to-emerald-500',
     icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>`,
-    liveUrl: 'https://meanun-expense-tracker.netlify.app',
-    githubUrl: 'https://github.com/meanun/expense-management',
-    hasDemo: true
+    // liveUrl: 'https://meanun-expense-tracker.netlify.app',
+    githubUrl: 'https://github.com/Mean-UN/Project-JavaScript-G14',
+    // hasDemo: true
   },
   {
     id: 3,
@@ -338,16 +358,13 @@ const projects = [
       'EC2 instance setup and configuration',
       'WordPress installation and customization',
       'MySQL database setup and optimization',
-      'SSL certificate implementation',
-      'Security hardening and backup solutions',
-      'Performance optimization',
-      'Domain configuration and DNS setup'
+      'Organization of the project',
     ],
     gradientBg: 'from-blue-500 to-indigo-500',
     icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.135-2.85-.135-.584-.031-.661.854-.082.899 0 0 .537.075 1.104.105l1.644 4.505L9.281 18.675l-2.926-8.78c.647-.03 1.232-.105 1.232-.105.582-.075.515-.93-.067-.899 0 0-1.755.135-2.88.135-.203 0-.44-.016-.69-.023C4.719 6.993 6.73 6.025 8.97 6.025c1.36 0 2.598.528 3.515 1.389-.022-.001-.04-.009-.062-.009-.203 0-.375.018-.375.018-.584.031-.661.854-.082.899 0 0 .537.075 1.104.105l1.644 4.505L9.281 18.675l-2.926-8.78z"/></svg>`,
-    liveUrl: 'https://your-wordpress-site.com',
+    // liveUrl: 'https://your-wordpress-site.com',
     githubUrl: null,
-    hasDemo: false
+    // hasDemo: false
   },
   {
     id: 4,
@@ -369,9 +386,9 @@ const projects = [
     ],
     gradientBg: 'from-orange-500 to-yellow-500',
     icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>`,
-    liveUrl: 'https://sports-clue-website.netlify.app',
-    githubUrl: 'https://github.com/meanun/sports-clue-website',
-    hasDemo: true
+    // liveUrl: 'https://sports-clue-website.netlify.app',
+    githubUrl: 'https://github.com/samounsuon/Sport-Club',
+    // hasDemo: true
   },
   {
     id: 5,
@@ -394,7 +411,7 @@ const projects = [
     gradientBg: 'from-purple-500 to-pink-500',
     icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>`,
     liveUrl: null,
-    githubUrl: 'https://github.com/meanun/music-voice-controller',
+    githubUrl: 'https://github.com/Mean74student/Project-Voice-Control-Music-by-Python-M-K-L',
     hasDemo: false
   },
   {
@@ -417,9 +434,9 @@ const projects = [
     ],
     gradientBg: 'from-red-500 to-pink-500',
     icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`,
-    liveUrl: 'https://figma.com/your-design-link',
-    githubUrl: null,
-    hasDemo: true
+    // liveUrl: 'https://figma.com/your-design-link',
+    // githubUrl: null,
+    // hasDemo: true
   }
 ]
 
@@ -427,7 +444,7 @@ const projects = [
 const skillCategories = [
   {
     title: 'Frontend Development',
-    skills: ['HTML/CSS', 'JavaScript', 'Vue.js', 'Bootstrap', 'SASS', 'Responsive Design'],
+    skills: ['HTML/CSS', 'JavaScript', 'Vue.js', 'Bootstrap', 'Tailwind CSS', 'SASS', 'Responsive Design', ],
     icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
     bgColor: 'bg-gradient-to-r from-blue-500 to-cyan-500'
   },
@@ -439,7 +456,7 @@ const skillCategories = [
   },
   {
     title: 'Tools & DevOps',
-    skills: ['Git/GitHub', 'AWS', 'Linux', 'Figma', 'Jira', 'WordPress'],
+    skills: ['Git/GitHub', 'AWS', 'Linux', 'Figma', 'Jira', 'WordPress' , 'AI tools', 'MS Office',],
     icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>`,
     bgColor: 'bg-gradient-to-r from-purple-500 to-pink-500'
   }

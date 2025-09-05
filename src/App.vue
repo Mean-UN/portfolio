@@ -356,7 +356,7 @@ const downloadCV = async () => {
     await new Promise(resolve => setTimeout(resolve, 1000))
     
     const link = document.createElement('a')
-  link.href = 'src/assets/pdf/Mean_UnCV.pdf' 
+  link.href = 'src/assets/pdf/Un Mean Web Developer .pdf' 
   link.download = 'Mean Un CV.pdf'
     document.body.appendChild(link)
     link.click()

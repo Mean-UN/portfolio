@@ -86,11 +86,11 @@
             <!-- Stats -->
             <div class="grid grid-cols-3 gap-4 mb-8">
               <div class="text-center p-4 bg-blue-50 rounded-lg">
-                <div class="text-2xl font-bold text-blue-600">10+</div>
+                <div class="text-2xl font-bold text-blue-600">9+</div>
                 <div class="text-sm text-gray-600">Projects Completed</div>
               </div>
               <div class="text-center p-4 bg-green-50 rounded-lg">
-                <div class="text-2xl font-bold text-green-600">2+</div>
+                <div class="text-2xl font-bold text-green-600">1.5+</div>
                 <div class="text-sm text-gray-600">Years Learning</div>
               </div>
               <div class="text-center p-4 bg-purple-50 rounded-lg">
@@ -290,7 +290,9 @@ const frontendSkills = [
   { name: 'JavaScript', color: 'bg-yellow-100 text-yellow-800 hover:bg-yellow-200' },
   { name: 'TypeScript', color: 'bg-blue-100 text-blue-800 hover:bg-blue-200' },
   { name: 'Vue.js', color: 'bg-green-100 text-green-800 hover:bg-green-200' },
-  { name: 'Bootstrap', color: 'bg-purple-100 text-purple-800 hover:bg-purple-200' }
+  { name: 'Bootstrap', color: 'bg-purple-100 text-purple-800 hover:bg-purple-200' },
+  { name: 'Tailwind CSS', color: 'bg-blue-100 text-blue-800 hover:bg-blue-200' },
+  { name: 'Dart', color: 'bg-pink-100 text-pink-800 hover:bg-pink-200' },
 ]
 
 const backendSkills = [
@@ -316,6 +318,13 @@ const databaseSkills = [
 
 // Recent projects based on your CV
 const recentProjects = [
+  {
+    title: 'Booking Travel APP',
+    description: 'Seft learning to create a app system for booking room in hotel with adventure place that user want to go and travel with their family or friends.',
+    technologies: ['Flutter', 'Dart', 'Laravel', 'MySQL', 'Jira', 'Git'],
+    icon: `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>`,
+    bgColor: 'bg-gradient-to-r from-blue-500 to-cyan-500'
+  },
   {
     title: 'Beauty Store System',
     description: 'Full-stack e-commerce website with AWS deployment, user management, and Telegram integration.',
@@ -343,7 +352,7 @@ const recentProjects = [
 const downloadCV = () => {
   // Create a temporary link element
   const link = document.createElement('a')
-  link.href = 'src/assets/pdf/Mean_UnCV.pdf' // Replace with actual CV path
+  link.href = 'src/assets/pdf/Un Mean Web Developer .pdf'
   link.download = 'Mean Un CV.pdf'
   document.body.appendChild(link)
   link.click()
