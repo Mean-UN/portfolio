@@ -248,6 +248,7 @@
 <script setup>
 import { reactive, ref, onMounted } from 'vue'
 import ScrollReveal from 'scrollreveal'
+import emailjs from '@emailjs/browser'
 
 // Template refs
 const headerSection = ref(null)
@@ -319,29 +320,38 @@ const faqs = [
 async function handleSubmit() {
   isSubmitting.value = true
   submitMessage.value = ''
-  
+
   try {
-    // Simulate API call - replace with actual endpoint
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    // For now, we'll simulate a successful submission
-    // In a real app, you'd send this to your backend
-    console.log('Form submitted:', form)
-    
+    const serviceID = 'mean_un168'
+    const templateID = 'template_2qw76mq'
+    const publicKey = 'kK_Byf6aC0hREdvAR'
+
+    const templateParams = {
+      full_name: form.name,
+      email: form.email,
+      subject: form.subject,
+      message: form.message
+    }
+
+    const result = await emailjs.send(serviceID, templateID, templateParams, publicKey)
+
+    console.log('Email sent successfully:', result.status, result.text)
+
     submitSuccess.value = true
     submitMessage.value = 'Thank you for your message! I\'ll get back to you within 24 hours.'
-    
+
     // Reset form
     Object.keys(form).forEach(key => {
       form[key] = ''
     })
-    
+
   } catch (error) {
+    console.error('Failed to send email:', error)
     submitSuccess.value = false
     submitMessage.value = 'Sorry, there was an error sending your message. Please try again or contact me directly via email.'
   } finally {
     isSubmitting.value = false
-    
+
     // Clear message after 5 seconds
     setTimeout(() => {
       submitMessage.value = ''
