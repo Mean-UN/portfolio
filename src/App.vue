@@ -258,6 +258,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, reactive, computed, nextTick } from 'vue'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
+import cvPdf from '@/assets/pdf/Un Mean Web Developer .pdf'
 
 // Router
 const route = useRoute()
@@ -348,20 +349,20 @@ const handleClickOutside = (e) => {
 
 const downloadCV = async () => {
   if (isDownloading.value) return
-  
+
   isDownloading.value = true
-  
+
   try {
     // Simulate download delay for better UX
     await new Promise(resolve => setTimeout(resolve, 1000))
-    
+
     const link = document.createElement('a')
-  link.href = 'src/assets/pdf/Un Mean Web Developer .pdf' 
-  link.download = 'Mean Un CV.pdf'
+    link.href = cvPdf
+    link.download = 'Mean Un CV.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
-    
+
     showToast('CV downloaded successfully!', 'success')
   } catch (error) {
     console.error('Download failed:', error)
